@@ -2,6 +2,7 @@ import google.generativeai as genai
 import streamlit as st
 import datetime
 
+st.write("金庫に入ってる鍵の名前リスト", list(st.secrets.keys))
 API_KEY = st.secrets["GEMINI_API_KEY"]
 genai.configure(api_key=API_KEY)
 model = genai.GenerativeModel('gemini-2.5-flash')
